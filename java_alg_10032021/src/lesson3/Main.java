@@ -3,7 +3,10 @@ package lesson3;
 
 public class Main {
     public static void main(String[] args) {
-//        MyStack<String> myStack = new MyStack<>();
+        MyStack<String> myStack = new MyStack<>();
+        for (int i = 0; i < 15; i++) {
+            myStack.push("a" + i);
+        }
 //
 //        myStack.push("asd");
 //        myStack.push("bnm");
@@ -28,18 +31,15 @@ public class Main {
 //        }
 //        System.out.println(myQueue);
 
-        MyPriorityQueue<Integer> mpq = new MyPriorityQueue<>();
-        mpq.insert(5);
-        mpq.insert(1);
-        mpq.insert(3);
-        mpq.insert(4);
-        mpq.insert(7);
-        mpq.insert(2);
+        StringReverse.reverse("йескелА");
 
-        System.out.println(mpq);
-        System.out.println(mpq.remove());
-        System.out.println(mpq);
-        mpq.insert(6);
-        System.out.println(mpq);
+        MyDeQueue<Integer> myDeQueue1 = new MyDeQueue<>();
+        MyDeQueue<Integer> myDeQueue2 = new MyDeQueue<>();
+        for (int i = 0; i < 5; i++) {
+            myDeQueue1.insertLeft(i*2);
+            myDeQueue2.insertRight(i*2);
+        }
+        myDeQueue1.removeLeft();
+        myDeQueue2.removeRight();
     }
 }
