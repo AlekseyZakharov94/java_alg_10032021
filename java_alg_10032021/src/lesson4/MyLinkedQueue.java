@@ -1,18 +1,20 @@
 package lesson4;
 
-public class MyLinkedStack<T> {
+import java.util.NoSuchElementException;
+
+public class MyLinkedQueue<T> {
     public MyLinkedList<T> ll = new MyLinkedList<>();
 
-    public void push(T item){
+    public void insert(T item) {
         ll.insertLast(item);
     }
 
-    public T peek(){
-        return ll.getLast();
+    public T peekFront() {
+        return ll.getFirst();
     }
 
-    public T pop(){
-        return ll.removeLast();
+    public T remove() {
+        return ll.removeFirst();
     }
 
     public int size(){
