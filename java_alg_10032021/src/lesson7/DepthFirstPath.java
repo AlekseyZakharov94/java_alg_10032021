@@ -2,15 +2,11 @@ package lesson7;
 
 import java.util.LinkedList;
 
-public class DepthFirstPath {
-    private boolean[] marked;
-    private int[] edgeTo;
-    private int source;
+public class DepthFirstPath extends GraphPath {
+
 
     public DepthFirstPath(Graph g, int source) {
-        this.source = source;
-        marked = new boolean[g.getVertexCount()];
-        edgeTo = new int[g.getVertexCount()];
+        super(g, source);
         dfs(g, source);
     }
 
