@@ -11,8 +11,10 @@ public class Main {
 //        System.out.println(triangleNum(5));
 //        System.out.println(recTriangleNum(5));
 
-        System.out.println(multiply(3,8));
-        System.out.println(recMultiply(3,8));
+//        System.out.println(multiply(3,8));
+//        System.out.println(recMultiply(3,8));
+
+        System.out.println(recExp(5,2));
 
     }
 
@@ -78,6 +80,17 @@ public class Main {
             return a;
         }
         return recMultiply(a, b - 1) + a;
+    }
+
+    //Рекурентное возведение числа в степень
+    public static int recExp (int number, int exp) {
+        if (exp == 0) {
+            return 1;
+        }
+        else if (number == 1 || exp == 0) {
+            return 1;
+        }
+        else return recExp(number, exp-1) * number;
     }
 
 }
