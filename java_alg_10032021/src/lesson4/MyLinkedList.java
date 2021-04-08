@@ -1,8 +1,6 @@
 package lesson4;
 
-import java.util.Iterator;
-import java.util.ListIterator;
-import java.util.NoSuchElementException;
+import java.util.*;
 
 public class MyLinkedList<T> implements Iterable<T> {
     private Node first;
@@ -15,7 +13,7 @@ public class MyLinkedList<T> implements Iterable<T> {
         return new Iter();
     }
 
-    public ListIterator<T> listiterator() {
+    public ListIterator<T> listIterator() {
         return new ListIter();
     }
 
